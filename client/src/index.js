@@ -1,11 +1,10 @@
-// bringing in react even tho i dont think we need it bc react doesnt require it, ima test that
+// we always have to bring it in ONCE, here on the root level, but then webpack enables us to only have to import once.
 import React from "react";
-
-// bring in reactDOM to mount component and DOM the DOM
 import reactDOM from "react-dom";
 
-// base component without JSX
-const App = React.createElement("h1", null, "hello world");
+const DrApp = () => {
+	return <h1>DR Stack Forever</h1>;
+};
 
 // rendering out the app to the dom, mounted on that root div i love so frickin much. it all comes out to that HTML babyyyyyyy
-reactDOM.render(App, document.getElementById("root"));
+reactDOM.render(DrApp, document.getElementById("root"));
